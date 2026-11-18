@@ -1,0 +1,17 @@
+import React from 'react';
+import { Slot } from '@radix-ui/react-slot';
+import { cva } from 'class-variance-authority';
+import { clsx } from 'clsx';import { twMerge } from 'tailwind-merge';
+import * as DialogPrimitive from '@radix-ui/react-dialog';
+import * as TabsPrimitive from '@radix-ui/react-tabs';
+import { X } from 'lucide-react';
+export const cn=(...x)=>twMerge(clsx(x));
+const variants=cva('inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 disabled:pointer-events-none disabled:opacity-50 cursor-pointer',{variants:{variant:{default:'bg-zinc-900 text-white hover:bg-zinc-800',outline:'border border-border bg-white hover:bg-zinc-100',ghost:'hover:bg-zinc-100',secondary:'bg-zinc-100 hover:bg-zinc-200'},size:{default:'h-9 px-3',sm:'h-8 px-2.5 text-xs',icon:'h-9 w-9'}},defaultVariants:{variant:'default',size:'default'}});
+export function Button({className,variant,size,asChild=false,...props}){const C=asChild?Slot:'button';return <C className={cn(variants({variant,size}),className)} {...props}/>}
+export const Card=({className,...p})=><div className={cn('rounded-2xl border border-border bg-white shadow-xs',className)} {...p}/>;
+export const Badge=({className,...p})=><span className={cn('inline-flex items-center gap-1 rounded-2xl border border-border px-2 py-0.5 text-[11px] font-medium',className)} {...p}/>;
+export const Input=({className,...p})=><input className={cn('flex h-9 w-full rounded-2xl border border-border bg-white px-3 text-sm outline-none focus:ring-2 focus:ring-zinc-300',className)} {...p}/>;
+export const Textarea=({className,...p})=><textarea className={cn('w-full resize-none rounded-md border border-border p-3 text-sm outline-none focus:ring-2 focus:ring-zinc-300',className)} {...p}/>;
+export function Progress({value}){return <div className="h-1.5 w-full overflow-hidden rounded-full bg-zinc-100"><div className="h-full rounded-full bg-zinc-800 transition-all" style={{width:`${value}%`}}/></div>}
+export function Tabs({value,onValueChange,items}){return <TabsPrimitive.Root value={value} onValueChange={onValueChange}><TabsPrimitive.List className="inline-flex h-9 items-center rounded-lg bg-zinc-100 p-1">{items.map(i=><TabsPrimitive.Trigger key={i} value={i} className="rounded-md px-3 py-1 text-xs text-zinc-500 data-[state=active]:bg-white data-[state=active]:text-zinc-950 data-[state=active]:shadow-sm">{i}</TabsPrimitive.Trigger>)}</TabsPrimitive.List></TabsPrimitive.Root>}
+export function Dialog({open,onOpenChange,title,description,children}){return <DialogPrimitive.Root open={open} onOpenChange={onOpenChange}><DialogPrimitive.Portal><DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-black/30 backdrop-blur-[2px]"/><DialogPrimitive.Content className="fixed left-1/2 top-1/2 z-50 max-h-[85vh] w-[min(92vw,640px)] -translate-x-1/2 -translate-y-1/2 overflow-auto rounded-[var(--radius-panel)] border bg-white p-6 shadow-xl"><DialogPrimitive.Title className="text-lg font-semibold">{title}</DialogPrimitive.Title><DialogPrimitive.Description className="mt-1 mb-5 text-sm text-zinc-500">{description}</DialogPrimitive.Description>{children}<DialogPrimitive.Close className="absolute right-4 top-4 rounded p-1 hover:bg-zinc-100" aria-label="Закрыть"><X size={16}/></DialogPrimitive.Close></DialogPrimitive.Content></DialogPrimitive.Portal></DialogPrimitive.Root>}
