@@ -40,7 +40,7 @@ export default function EditorToolbar({editor,onChange,disabled}){
   if(key==='code')return chooseFormat('pre');
   if(key==='quote')return chooseFormat('blockquote');
   if(key==='divider')return insert('<hr>');
-  if(key==='info')return insert('<aside class="lesson-info"><p>Обратите внимание</p></aside>');
+  if(key==='info')return insert('<div class="pdf-callout"><div class="pdf-callout-label"><span>ОПРЕДЕЛЕНИЕ</span></div><div class="pdf-callout-body"><p><strong>Термин</strong> — добавьте определение.</p></div></div>');
   if(key==='accordion')insert('<details class="lesson-accordion" open><summary>Заголовок аккордеона</summary><p>Добавьте содержимое.</p></details>');
  }
  function submit(e){e.preventDefault();const text=value.trim();if(!text)return;
