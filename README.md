@@ -1,5 +1,9 @@
 # AI-редактор курсов LMS
 
+Сайт: https://evgeny-novaz.github.io/lms-editor/
+
+Обновления ветки `main` автоматически собираются и публикуются через GitHub Actions.
+
 Клиентский прототип редактора Центрального университета на React 19, Vite, Tailwind CSS, Radix UI и Lucide, с компонентами в стиле shadcn/ui.
 
 ## Запуск
