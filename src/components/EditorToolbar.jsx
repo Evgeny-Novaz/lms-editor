@@ -11,7 +11,7 @@ const backgrounds=['#ffffff','#f0f1f3','#e9e5ff','#dfeeff','#e2f4e7','#fff2cc','
 const escapeHtml=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const Icon=({name})=><img src={`${import.meta.env.BASE_URL}editor-icons/${name}.svg`} alt="" draggable="false"/>;
 
-export default function EditorToolbar({editor,onChange,onSnapshot,disabled}){
+export default function EditorToolbar({editor,onChange,disabled}){
  const range=useRef(null),trigger=useRef(null),popup=useRef(null),upload=useRef(null),uploadKind=useRef('image');
  const [menu,setMenu]=useState(null),[value,setValue]=useState(''),[error,setError]=useState(''),[active,setActive]=useState({});
  const remember=()=>{const s=window.getSelection();if(s?.rangeCount&&editor.current?.contains(s.anchorNode)&&editor.current?.contains(s.focusNode))range.current=s.getRangeAt(0).cloneRange()};
@@ -54,7 +54,6 @@ export default function EditorToolbar({editor,onChange,onSnapshot,disabled}){
  const kind=menu?.kind;
  return <><div className={`toolbar editor-toolbar${disabled?' macro-toolbar-disabled':''}`} aria-disabled={disabled||undefined}>
   <div className="editor-toolbar-scroll" role="toolbar" aria-label="Инструменты редактора" onMouseDown={e=>{remember();e.preventDefault()}}>{groups.map((group,i)=><React.Fragment key={i}>{i>0&&<span className="editor-tool-separator" aria-hidden="true"/>}{group.map(key=><button key={key} type="button" className="editor-tool" aria-label={tools[key][1]} title={tools[key][1]} disabled={disabled} aria-haspopup={['format','text','align','list','color','highlight','link','anchor','formula','table','columns'].includes(key)?'dialog':undefined} aria-expanded={menu?.kind===key||undefined} aria-pressed={key==='sub'?!!active.subscript:key==='sup'?!!active.superscript:undefined} onClick={e=>act(key,e)}><Icon name={tools[key][0]}/></button>)}</React.Fragment>)}</div>
-  <button type="button" className="editor-save-version" disabled={disabled} onClick={onSnapshot}><span aria-hidden="true">✓</span><span>Сохранить версию</span></button>
  </div><input ref={upload} type="file" hidden onChange={attach}/>
  {error&&!menu&&<p className="editor-upload-error" role="alert">{error}</p>}
  {menu&&createPortal(<div ref={popup} className="editor-tool-popup" style={{left:menu.left,top:menu.top,width:menu.width,maxHeight:menu.maxHeight}} role="dialog" aria-label={tools[kind][1]} onKeyDown={menuKeys}>
