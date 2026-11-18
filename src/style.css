@@ -60,7 +60,7 @@
 
 /* Frost the page underneath the dock, leaving the input and action buttons crisp. */
 .context-chat-dock,.home-chat-dock{isolation:isolate;background:transparent}
-.context-chat-dock::before,.home-chat-dock::before{content:'';position:absolute;inset:var(--chat-blur-top,12px) 0 0;z-index:-1;pointer-events:none;background:rgb(255 255 255 / .12);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 60px);mask-image:linear-gradient(to bottom,transparent 0,#000 60px)}
+.context-chat-dock::before,.home-chat-dock::before{content:'';position:absolute;inset:var(--chat-blur-top,12px) 0 0;z-index:-1;pointer-events:none;background:#fff;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 60px);mask-image:linear-gradient(to bottom,transparent 0,#000 60px)}
 
 .home-chat-dock{--chat-blur-top:16px}
 
