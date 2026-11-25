@@ -154,3 +154,27 @@
 .course-area-icon{background:#f4f4f5;color:#646468;border-radius:8px}.course-area-icon>svg{flex-shrink:0}
 
 .storage-loading{display:flex;align-items:center;justify-content:center;gap:10px;min-height:100vh;background:#fafafa;color:#71717a;font-size:14px}
+
+.editor .ml-learning-figure{margin:24px 0 32px}.editor .ml-learning-figure img{display:block;width:100%;height:auto}.editor .ml-learning-figure figcaption{font-size:12px;line-height:19px;text-align:center;color:#71717a;margin-top:8px}.editor .ml-video-placeholder{display:flex;align-items:center;justify-content:center;min-height:180px;border:1px solid #e5e5e5;border-radius:12px;background:#fafafa;color:#71717a;margin:20px 0}.editor .ml-video-placeholder p{margin:0;color:inherit}
+
+.editor .ml-assignment-card{position:relative;display:flex;align-items:flex-start;gap:12px;padding:24px;border:1px solid #e4e4e7;border-radius:10px;overflow:hidden;background:#fff;margin:24px 0}.editor .ml-assignment-card>div{min-width:0;flex:1}.editor .ml-assignment-status{display:inline-flex;align-items:center;gap:4px;border:1px solid transparent;border-radius:6px;padding:2px 10px;background:#eff2f6;color:#59677b;font-size:12px;font-weight:500;line-height:16px}.editor .ml-assignment-card h3{font-size:17px;font-weight:500;line-height:1.4;margin:12px 0;color:#19191a}.editor .ml-assignment-card .ml-assignment-points{margin:0 0 16px;color:#646468;font-size:12px;line-height:20px}.ml-assignment-actions{display:flex;align-items:center;gap:4px}.editor .ml-assignment-open{display:inline-flex;align-items:center;justify-content:center;height:32px;padding:0 12px;border:1px solid #d8d8d9;border-radius:8px;background:#fff;color:#19191a;font-size:12px;font-weight:500;line-height:20px}.editor .ml-assignment-icon{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;padding:0;border:0;border-radius:8px;background:transparent;color:#646468}.editor .ml-assignment-calendar{color:#6938c0}.ml-assignment-actions button:hover{background:#f4f4f5}.ml-assignment-actions button:focus-visible{outline:2px solid #b69ae9;outline-offset:2px}@media(max-width:700px){.editor .ml-assignment-card{padding:20px}}
+
+.editor .lesson-files{margin:20px 0;display:flex;flex-direction:column;gap:10px}.editor .lesson-file{display:flex;align-items:center;gap:8px;margin:0;padding:12px 0;border-bottom:1px solid #e4e4e7;line-height:20px}.editor .lesson-file-main{display:flex;align-items:center;gap:12px;min-width:0;flex:1;color:#19191a;text-decoration:none}.editor .lesson-file-main:hover strong{text-decoration:underline;text-underline-offset:3px}.editor .lesson-file-icon{width:32px;height:32px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:#2666c2;background:#eaf2ff}.editor .lesson-file-icon[data-kind=pdf]{color:#ef4055;background:#fce8ec}.editor .lesson-file-icon[data-kind=code]{color:#804de3;background:#f0e8ff}.editor .lesson-file-icon svg{width:20px;height:20px}.editor .lesson-file-info{min-width:0}.editor .lesson-file-info strong{display:block;font-size:13px;font-weight:500;line-height:20px;overflow-wrap:anywhere}.editor .lesson-file-info small{display:block;margin-top:4px;color:#646468;font-size:11px;line-height:16px}.editor .lesson-file-action{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:36px;height:36px;padding:0;border:0;border-radius:8px;background:transparent;color:#19191a;text-decoration:none}.editor .lesson-file-action:hover{background:#f4f4f5}.editor .lesson-file-delete:hover{color:#dc2626;background:#fef2f2}.editor .lesson-file-download{display:none}.lesson-body[data-remarks-visible=false] .lesson-file-delete{display:none}.lesson-body[data-remarks-visible=false] .lesson-file-download{display:inline-flex}.lesson-file a:focus-visible,.lesson-file button:focus-visible{outline:2px solid #b69ae9;outline-offset:3px}
+
+.editor h3{font-size:17px;font-weight:500;line-height:1.4;margin:24px 0 12px;color:#19191a}
+
+.app-header::before{content:"";position:absolute;left:-1px;right:-1px;top:-9px;height:9px;background:#f4f4f5;pointer-events:none}
+@media(max-width:600px){.app-header::before{display:none}}
+
+/* Keep the shell frame stationary; only page content scrolls. */
+.lms-app{height:100dvh;min-height:0;overflow:hidden}
+.app-main-shell{height:calc(100dvh - 16px);min-height:0;overflow:hidden;isolation:isolate}
+.app-header{position:relative;top:auto;border-radius:8px 8px 0 0}
+.app-header::before{display:none}
+.app-content-area{overflow:hidden}
+.app-content-scroll{min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.app-content-scroll .editor-toolbar{top:0}
+.context-chat-dock{bottom:8px;right:8px}
+.home-chat-dock{flex-shrink:0}
+.student-preview-sidebar{top:24px;max-height:calc(100dvh - 112px)}
+@media(max-width:600px){.app-main-shell{margin:8px 8px 8px 0;height:calc(100dvh - 16px);min-height:0;border:1px solid #ededee;border-radius:8px}.app-header{top:auto;border-radius:8px 8px 0 0}.app-content-scroll .editor-toolbar{top:0}}

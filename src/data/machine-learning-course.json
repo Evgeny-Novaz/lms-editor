@@ -1,0 +1,125 @@
+{
+  "id": "machine-learning",
+  "title": "Машинное обучение (Machine Learning)",
+  "area": "Разработка",
+  "desc": "Курс по машинному обучению — фундамент, который поможет освоить сложные предметные области в искусственном интеллекте и Data Science. Здесь ты научишься самостоятельно работать с ML-моделями: выбирать, обучать, настраивать, валидировать их и интерпретировать результаты в реальных проектах.",
+  "icon": "code",
+  "color": "bg-indigo-50 text-indigo-600",
+  "featuredFirst": true,
+  "topics": [
+    {
+      "id": "ml-block-1",
+      "title": "Основные термины машинного обучения и смежных областей. Оценка качества моделей",
+      "lessons": [
+        {
+          "id": "ml-block-1-topic-1",
+          "title": "Метрики и функционалы потерь в задачах регрессии и классификации",
+          "status": "Черновик",
+          "readingMinutes": 12
+        },
+        {
+          "id": "ml-block-1-topic-2",
+          "title": "Контроль качества и выбор модели. Метрические алгоритмы",
+          "status": "Черновик",
+          "readingMinutes": 12
+        }
+      ]
+    },
+    {
+      "id": "ml-block-2",
+      "title": "Линейные модели",
+      "lessons": [
+        {
+          "id": "ml-block-2-topic-1",
+          "title": "Линейная регрессия (часть 1)",
+          "status": "Черновик",
+          "readingMinutes": 12
+        },
+        {
+          "id": "ml-block-2-topic-2",
+          "title": "Линейная регрессия (часть 2)",
+          "status": "Черновик",
+          "readingMinutes": 12
+        },
+        {
+          "id": "ml-block-2-topic-3",
+          "title": "Логистическая регрессия, SVM",
+          "status": "Черновик",
+          "readingMinutes": 12
+        }
+      ]
+    },
+    {
+      "id": "ml-block-3",
+      "title": "Деревья решений и модели, основанные на них",
+      "lessons": [
+        {
+          "id": "ml-block-3-topic-1",
+          "title": "Решающие деревья",
+          "status": "Черновик",
+          "readingMinutes": 12
+        },
+        {
+          "id": "ml-block-3-topic-2",
+          "title": "Сложность алгоритмов. Ансамбли алгоритмов",
+          "status": "Черновик",
+          "readingMinutes": 12
+        },
+        {
+          "id": "ml-block-3-topic-3",
+          "title": "Случайные леса. Градиентный бустинг (часть 1)",
+          "status": "Черновик",
+          "readingMinutes": 12
+        },
+        {
+          "id": "ml-block-3-topic-4",
+          "title": "Градиентный бустинг (часть 2)",
+          "status": "Черновик",
+          "readingMinutes": 12
+        },
+        {
+          "id": "ml-block-3-topic-5",
+          "title": "Uplift-моделирование",
+          "status": "Черновик",
+          "readingMinutes": 12
+        }
+      ]
+    },
+    {
+      "id": "ml-block-4",
+      "title": "Обучение без учителя и работа с признаками",
+      "lessons": [
+        {
+          "id": "ml-block-4-topic-1",
+          "title": "Обучение без учителя. Кластеризация и методы понижения размерности",
+          "status": "Черновик",
+          "readingMinutes": 12
+        },
+        {
+          "id": "ml-block-4-topic-2",
+          "title": "Обнаружение аномалий",
+          "status": "Черновик",
+          "readingMinutes": 12
+        },
+        {
+          "id": "ml-block-4-topic-3",
+          "title": "Генерация и отбор признаков",
+          "status": "Черновик",
+          "readingMinutes": 12
+        },
+        {
+          "id": "ml-block-4-topic-4",
+          "title": "Интерпретация моделей и диагностика сдвига данных",
+          "status": "Черновик",
+          "readingMinutes": 12
+        },
+        {
+          "id": "ml-block-4-topic-5",
+          "title": "Частые вопросы на ML-собеседованиях",
+          "status": "Черновик",
+          "readingMinutes": 12
+        }
+      ]
+    }
+  ]
+}

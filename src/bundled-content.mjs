@@ -22,7 +22,7 @@ export function mergeBundledCourses(stored,bundled){
       for(const lesson of topic.lessons){if(!present.has(lesson.id)&&!current.deletedLessonIds?.includes(lesson.id)){dest.lessons.push(structuredClone(lesson));present.add(lesson.id)}}
     }
   }
-  return next;
+  return [...next.filter(c=>bundled.some(b=>b.id===c.id&&b.featuredFirst)),...next.filter(c=>!bundled.some(b=>b.id===c.id&&b.featuredFirst))];
 }
 export function mergeBundledDocuments(stored,bundled){
   return {...bundled,...(stored&&typeof stored==='object'&&!Array.isArray(stored)?stored:{})};
